@@ -227,12 +227,7 @@ void sgfx_set_2d_quad_pos(sgfx_ogl_prim_t * p, f32 x, f32 y);
 void sgfx_set_primitive_texture_slot(sgfx_ogl_prim_t * p, f32 slot);
 void sgfx_convert_phys_obj_to_ogl(uphys_obj_t * o, sgfx_ogl_prim_t * p, u32 texture_slot);
 void sgfx_mk_textured_clip_quad(sgfx_ogl_prim_t * p, f32 x, f32 y, f32 w, f32 h, f32 texture_slot, f32 t_x1, f32 t_x2);
-    // how opengl works?
-    // Renderer taken from VoxelRifts' tutorial
-    //  HOW DO TEXTURES WORK????
-    // Credentials:
-        // ABC 123, 9999, John Smith, 1234
-
+// Renderer taken from VoxelRifts' tutorial
 #ifdef __EMSCRIPTEN__
     #define SHADER_VERSION_STR "#version 300 es\n" 
 #else

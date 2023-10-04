@@ -33,7 +33,7 @@
     - [x] 2D Rendering, Batch Rendering, Textures (`2d_textures.c`)
     - [x] Textured Cubes, 3D Rendering in single example (`3d_textured.c`)
     - [x] Pyramid Model Loading (`3d_model.c`)
-    - [x] [A Small 2D Game](https://github.com/1dev-mha/Dodgy-3quares)
+    - [x] [A Small 2D Game](https://github.com/1devm0/Dodgy-3quares)
 - The renderer supports web compilation for examples such as the cubes and textured squares. Some of the examples such as the OBJ lodaer and the game don't work however due to various memory issues. 
 
 
