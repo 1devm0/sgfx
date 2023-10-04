@@ -32,10 +32,6 @@ i32 main(i32 argv, char ** args);
 #define SDL_main main
 
 /*
-    ECS: https://austinmorlan.com/posts/entity_component_system/#the-component
-*/
-
-/*
     Timer
 */
 typedef struct {
@@ -103,13 +99,6 @@ void sgfx_get_px_in_surface(SDL_Surface * s, i32 x, i32 y, SDL_Color * color);
 // Set scale of any SDL Renderer
 #define sgfx_set_render_scale SDL_RenderSetScale
 
-// TODO:
-    // ui label
-    // draw functions
-    // animated image
-    // audio
-    // pointer tracking -> free
-
 // Software renderer, simply an SDL_Surface that allows a user of the library to draw to the surface
 typedef struct _sgfx_swe_renderer {
     // Surface
@@ -172,10 +161,6 @@ void sgfx_bind_shader(u32 id);
 void sgfx_unbind_shader();
 // Deletes a shader and therefore frees the memory allocated for a shader
 void sgfx_rm_shader(u32 id);
-
-// TODO: Handle aspect ratio and resizing properly
-um4x4_t sgfx_handle_viewport_aspect_ratio(f32 target_aspect_ratio, SDL_Window * w, um4x4_t projection);
-
 
 typedef struct {
     uv3_t pos;    

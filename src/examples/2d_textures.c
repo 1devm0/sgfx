@@ -104,8 +104,6 @@ void game_init(game_t * g) {
     sgfx_set_2d_quad_pos(g -> s -> shape, screen_w/2, screen_h/2);
 }
 
-uv3_t tmp;
-
 void game_run(void * _g) {
     game_t * g = (game_t *) _g;
 

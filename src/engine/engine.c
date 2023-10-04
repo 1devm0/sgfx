@@ -253,31 +253,6 @@ void sgfx_rm_shader(u32 id) {
     sgfx_call_gl(glDeleteShader(id));
 }
 
-// Understand the math
-um4x4_t sgfx_handle_viewport_aspect_ratio(f32 target_aspect_ratio, SDL_Window * w, um4x4_t projection) {
-    if (target_aspect_ratio < 0) target_aspect_ratio = 1;
-    i32 s_w, s_h;
-    SDL_GetWindowSize(w, &s_w, &s_h);
-
-
-    i32 width = s_w;
-    i32 height = (i32) (width / target_aspect_ratio + 0.5);
-
-    if (height > s_h) {
-        height = s_h;
-        width = (i32)(height * target_aspect_ratio + 0.5f);
-    }
-    i32 vp_x = (s_w / 2) - (width / 2);
-    i32 vp_y = (s_h / 2) - (height / 2);
-
-
-    sgfx_call_gl(glViewport(vp_x, vp_y, width, height));
-    // printf("%f %f\n", vp_x, vp_y);
-    projection = um4x4_orthographic_projection(vp_x, width, height, vp_y, -1, 1);
-    return projection;
-
-}
-
 // used to do projection on ccpu but results weird with projectioon matrix
 
 
